@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSK Hall Of Pride</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('csk5.jpg');
+            background-size: cover;
+            align-content: flex-end;
+        }
+        header {
+            background-color: rgba(0, 0, 255, 0.721);
+            color: yellow;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-radius: 5px;
+        }
+        .container-item {
+            width: calc(33.33% - 20px);
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 0, 0.001);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.293);
+            border-radius: 15px;
+        }
+        .container-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .container-item h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .container-item button {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: Blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .container-item {
+                width: calc(50% - 20px);
+                background-color:rgba(224, 129, 12, 0.012);
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .container-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-primary text-white">
+        <h1 class="mb-0">CSK Hall Of Pride🏆</h1>
+    </header>
+    <div class="container">
+        <div class="container-item">
+            <img src="msdhop.jpg" alt="MS Dhoni" class="img-fluid">
+            <h2>MS Dhoni</h2>
+            <button class="btn btn-primary" onclick="openWiki('MS Dhoni')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="raina.jpg" alt="Suresh Raina" class="img-fluid">
+            <h2>Suresh Raina</h2>
+            <button class="btn btn-primary" onclick="openWiki('Suresh Raina')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="jaddu.jpg" alt="Ravindra Jadeja" class="img-fluid">
+            <h2>Ravindra Jadeja</h2>
+            <button class="btn btn-primary" onclick="openWiki('Ravindra Jadeja')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="ar.jpg" alt="Ambati Rayudu" class="img-fluid">
+            <h2>Ambati Rayudu</h2>
+            <button class="btn btn-primary" onclick="openWiki('Ambati Rayudu')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="dj.jpg" alt="DJ Bravo" class="img-fluid">
+            <h2>DJ Bravo</h2>
+            <button class="btn btn-primary" onclick="openWiki('DJ Bravo')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="sw.jpg" alt="Shane Watson" class="img-fluid">
+            <h2>Shane Watson</h2>
+            <button class="btn btn-primary" onclick="openWiki('Shane Watson')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="faf.jpg" alt="Faf du Plessis" class="img-fluid">
+            <h2>Faf du Plessis</h2>
+            <button class="btn btn-primary" onclick="openWiki('Faf du Plessis')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="dc.jpg" alt="Deepak Chahar" class="img-fluid">
+            <h2>Deepak Chahar</h2>
+            <button class="btn btn-primary" onclick="openWiki('Deepak Chahar')">More...</button>
+        </div>
+        <div class="container-item">
+            <img src="rr.jpg" alt="Faf du Plessis" class="img-fluid">
+            <h2>Ruturaj Gaikwad</h2>
+            <button class="btn btn-primary" onclick="openWiki('Ruturaj Gaikwad')">More...</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function openWiki(playerName) {
+            var playerNameForURL = playerName.replace(/\s+/g, '_');
+            window.open('https://en.wikipedia.org/wiki/' + playerNameForURL, '_blank');
+        }
+    </script>
+</body>
+</html>

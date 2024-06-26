@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body{
+            background-image: url('cskarmy.jpg');
+            background-size: cover;
+            align-content: flex-end;
+        }
+        h1{
+            color:black;
+        }
+    </style>
+    
+    <div class="content">
+        <h1>REGISTRATION..!!</h1>
+        <form action="/register" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" >
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" >
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob"><br>
+            <a href="Login.html" class="btn-primary">Register</a>
+        </form>
+    </div>
+   
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('password').value.trim();
+            var dob = document.getElementById('dob').value;
+
+            if (username === '') {
+                alert('Please enter your username.');
+                return false;
+            }
+
+            if (email === '') {
+                alert('Please enter your email.');
+                return false;
+            }
+
+            // Basic email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            if (password === '') {
+                alert('Please enter your password.');
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return false;
+            }
+
+            if (dob === '') {
+                alert('Please enter your date of birth.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
